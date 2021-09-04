@@ -182,69 +182,42 @@ header .play-button{
 
 /* Slider */
 
-.slider-container {
-  max-width: 500px;
-  margin: 0 auto;
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
 }
-.slider-container .slick {
-  position: relative;
-  width: calc(100% - 60px);
-  margin: 0 auto;
-  background-color: #2b2b2b;
-  border-radius: 10px;
-  padding: 20px 30px;
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
 }
-.slider-container .slick .slide {
-  border: none;
-  color: rgba(255, 255, 255, 0.75);
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
 }
-.slider-container .slick .slide:focus {
-  outline: none;
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
 }
-.slider-container .slick .slide p {
-  display: block;
+.carousel-fade .carousel-control {
+  z-index: 2;
 }
-.slider-container .slick .slick-arrow {
-  transform: rotate(90deg);
-  top: initial;
-  right: initial;
-  left: -30px;
-  bottom: 0;
-  z-index: 1;
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
 }
-.slider-container .slick .slick-arrow.slick-prev {
-  bottom: 30px;
+.item:nth-child(1) {
+  background: #74C390;
 }
-.slider-container .slick .slick-arrow.slick-prev:before {
-  transform: rotate(135deg);
+.item:nth-child(2) {
+  background: #51BCE8;
 }
-.slider-container .slick .slick-arrow.slick-next:before {
-  transform: rotate(-45deg);
-}
-.slider-container .slick .slick-arrow:before {
-  transition: opacity 0.25s;
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-}
-.slider-container .slick .slick-dots {
-  position: absolute;
-  width: 30px;
-  left: -30px;
-  top: 0;
-}
-.slider-container .slick .slick-dots li {
-  margin: 0 auto;
-  width: 30px;
-  display: block;
-}
-.slider-container .slick .slick-dots li button {
-  padding: 0;
-}
-.slider-container .slick .slick-dots li button:before {
-  transition: opacity 0.25s;
-  color: white;
+.item:nth-child(3) {
+  background: #E46653;
 }

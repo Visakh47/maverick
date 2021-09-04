@@ -19,7 +19,7 @@
           href="{{ url_for('static', filename='index.css') }}"
         />
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -53,13 +53,33 @@
         </div>
     </div> -->
     
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+    </div>
+    
+    
     <!-- <div class="play-button">
       <span class="play">Play Video</span>
       <i class="fas fa-play" onclick="click()"></i>
     </div> -->
   </header>
 
-  <script src='/static/slider.js'></script>  
+  <script>
+    $('.carousel').carousel();
+  </script>  
 
 </body>
 </html>
