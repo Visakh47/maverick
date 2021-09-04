@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
-
+print(API_KEY)
 
 app = Flask(__name__)
 # using flask = True genrates flask template
@@ -33,8 +33,16 @@ def setLoaded(reset=False):
 def index():
     return render_template("index.html")
 
+@app.route("/udemy_analytics")
+def udemy():
+    return render_template("udemy.html")
 
-@app.route("/login_page")
+@app.route("/coursera_analytics")
+def coursera():
+    return render_template("coursera.html")
+
+
+@app.route("/login_page", methods=["POST"])
 def login_page():
     setLoaded()
     setPayload(load if loaded < 2 else '')

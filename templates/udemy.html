@@ -19,6 +19,7 @@
           href="{{ url_for('static', filename='index.css') }}"
         />
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -39,25 +40,30 @@
       </form>
       </div>
     </nav>
-    <div class="text-content">
+    <!-- <div class="text-content">
       <h2>How Effective <br>Are Online Courses?</h2>
       <p>A deep dive into the analytics of the <b>Coursera & Udemy</b> courses in the education industry. Login via <b>Sawo</b> to view your udemy and coursera analytics now! <i>[Coming Soon]</i> </p>
       <div class="buttons">
-      <form action="/udemy_analytics">
-        <input type="submit" value="Udemy Analytics"> <br>
+      <form action="/login_page" method="post">
+        <input type="submit" method="LOGIN" value="Udemy Analytics"> <br>
       </form>
-      <form action="/coursera_analytics">
-        <br> <input type="submit" value="Coursera Analytics"> <br>
+      <form action="/login_page" method="post">
+        <br> <input type="submit" method="LOGIN" value="Coursera Analytics"> <br>
+
       </form>
       </div>
       
-    </div>
+    </div> -->
+    
     <!-- <div class="play-button">
       <span class="play">Play Video</span>
       <i class="fas fa-play" onclick="click()"></i>
     </div> -->
   </header>
 
+
   <script src='/static/slider.js'></script>  
+
+
 </body>
 </html>
